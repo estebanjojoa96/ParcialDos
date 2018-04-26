@@ -13,8 +13,8 @@ public class JsonFood {
 
     public static List<Food> getData(String content) throws JSONException {
 
-
-        JSONArray jsonArray = new JSONArray(content);
+        JSONObject jsonData = new JSONObject(content);
+        JSONArray jsonArray = jsonData.getJSONArray("results");
         List<Food> FoodList = new ArrayList<>();
 
         for (int i = 0; i < jsonArray.length(); i++) {

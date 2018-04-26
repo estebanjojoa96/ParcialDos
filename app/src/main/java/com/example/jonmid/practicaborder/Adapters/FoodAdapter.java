@@ -44,7 +44,7 @@ public class FoodAdapter extends RecyclerView.Adapter<FoodAdapter.ViewHolder> {
         holder.textViewFood.setText(FoodList.get(position).getTitle());
 
 
-        @Override
+
         public int getItemCount () {
             return FoodList.size();
         }
@@ -55,10 +55,10 @@ public class FoodAdapter extends RecyclerView.Adapter<FoodAdapter.ViewHolder> {
             TextView textViewFood;
 
 
-            public ViewHolder(View item) {
-                super(item);
+            public ViewHolder(View item_food) {
+                super(item_food);
 
-                textViewFood = (TextView) item.findViewById(R.id.id_txv_food_title);
+                textViewFood = (TextView) item_food.findViewById(R.id.id_txv_food_title);
 
             }
         }
