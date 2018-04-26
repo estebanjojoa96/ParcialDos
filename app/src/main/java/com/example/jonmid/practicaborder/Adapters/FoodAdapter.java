@@ -33,7 +33,7 @@ public class FoodAdapter extends RecyclerView.Adapter<FoodAdapter.ViewHolder> {
         View item = LayoutInflater.from(parent.getContext()).inflate(R.layout.item_food, parent, false);
 
         // Pasar la vista (item.xml) al ViewHolder
-        ViewHolder viewHolder = new ViewHolder(item_food);
+        ViewHolder viewHolder = new ViewHolder(item);
 
         return viewHolder;
     }
@@ -42,7 +42,7 @@ public class FoodAdapter extends RecyclerView.Adapter<FoodAdapter.ViewHolder> {
     public void onBindViewHolder(@NonNull ViewHolder holder, int position) {
         // Asignar los valores a la vista
         holder.textViewFood.setText(FoodList.get(position).getTitle());
-
+    }
 
 
         public int getItemCount () {
@@ -63,4 +63,3 @@ public class FoodAdapter extends RecyclerView.Adapter<FoodAdapter.ViewHolder> {
             }
         }
     }
-}

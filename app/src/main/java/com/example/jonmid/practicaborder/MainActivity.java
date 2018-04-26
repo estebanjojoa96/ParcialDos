@@ -28,6 +28,7 @@ public class MainActivity extends AppCompatActivity {
 
     TextView textViewFood;
     RecyclerView recyclerView;
+    FoodAdapter foodAdapter;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -81,8 +82,8 @@ public class MainActivity extends AppCompatActivity {
     public void processData(){
 
 
-        FoodAdapter = new FoodAdapter(FoodList, getApplicationContext());
-        recyclerView.setAdapter(FoodAdapter);
+        foodAdapter = new FoodAdapter(FoodList, getApplicationContext());
+        recyclerView.setAdapter(foodAdapter);
     }
 
 
